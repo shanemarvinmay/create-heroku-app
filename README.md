@@ -31,4 +31,4 @@ USAGE
 
 <!-- commandsstop -->
 
-./bin/run
+./bin/run --type=express
