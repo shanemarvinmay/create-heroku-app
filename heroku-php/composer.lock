@@ -195,7 +195,7 @@
                 "php": ">=5.5.9",
                 "pimple/pimple": "~3.0",
                 "symfony/event-dispatcher": "~2.8|^3.0",
-                "symfony/http-foundation": "~2.8|^3.0",
+                "symfony/http-foundation": "3.4.35",
                 "symfony/http-kernel": "~2.8|^3.0",
                 "symfony/routing": "~2.8|^3.0"
             },
@@ -451,7 +451,7 @@
                 "psr/log": "~1.0",
                 "symfony/debug": "~2.8|~3.0",
                 "symfony/event-dispatcher": "~2.8|~3.0",
-                "symfony/http-foundation": "~2.8.13|~3.1.6|~3.2"
+                "symfony/http-foundation": "3.4.35"
             },
             "conflict": {
                 "symfony/config": "<2.8"
@@ -599,7 +599,7 @@
                 "psr/log": "~1.0",
                 "symfony/config": "~2.8|~3.0",
                 "symfony/expression-language": "~2.8|~3.0",
-                "symfony/http-foundation": "~2.8|~3.0",
+                "symfony/http-foundation": "3.4.35",
                 "symfony/yaml": "~2.8|~3.0"
             },
             "suggest": {
