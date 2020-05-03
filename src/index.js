@@ -64,6 +64,19 @@ const createExpressApp = async (name) => {
     console.log(`stdout: ${stdout}`);
   });
 }
+const createDjangoApp = async (name) => {
+  exec(`cp -R ./heroku-django ../ && mv ../heroku-django/ ../${name}`, (error, stdout, stderr) => {
+    if (error) {
+      console.log(`error: ${error.message}`);
+      return;
+    }
+    if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return;
+    }
+    console.log(`stdout: ${stdout}`);
+  });
+}
 class CreateHerokuAppCommand extends Command {
   async run() {
     const { flags } = this.parse(CreateHerokuAppCommand)
@@ -85,6 +98,9 @@ class CreateHerokuAppCommand extends Command {
     // copy over heroku express project 
     if( typeOfApp == 'express' ) {
       createExpressApp(name);
+    }
+    else if( typeOfApp == 'django' ) {
+      createDjangoApp(name);
     }
     this.log(`App type selected: ${typeOfApp}`);
     this.log(`App name given: ${name}`);
