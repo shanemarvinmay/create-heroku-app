@@ -30,3 +30,5 @@ USAGE
 <!-- commands -->
 
 <!-- commandsstop -->
+
+./bin/run
