@@ -30,5 +30,7 @@ USAGE
 <!-- commands -->
 
 <!-- commandsstop -->
-
-./bin/run --type=express
+Example of how to run it locally
+```sh-session
+./bin/run --type=express --name=app-name
+```
