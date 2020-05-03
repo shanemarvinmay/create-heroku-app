@@ -12,7 +12,8 @@
     "@oclif/config": "^1.15.1",
     "@oclif/plugin-help": "^2.2.3",
     "child_process": "^1.0.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "fs": "0.0.1-security"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.22.2"
