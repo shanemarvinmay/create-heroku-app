@@ -24,33 +24,7 @@ const checkArgs = (name, type) => {
   }
   return error;
 };
-const expressInit = async (name) => {
-  // how to check for a express 
-  exec(`cd ../${name} && npm init -y && npm install express`, (error, stdout, stderr) => {
-    if (error) {
-      console.log(`error: ${error.message}`);
-      return;
-    }
-    if (stderr) {
-      console.log(`stderr: ${stderr}`);
-      return;
-    }
-    console.log(`stdout:\n ${stdout}`);
-  });
-}
-const makeProject = async (name) => {
-  exec(`cd .. && mkdir ${name} && cd ${name}`, (error, stdout, stderr) => {
-    if (error) {
-      console.log(`error: ${error.message}`);
-      return;
-    }
-    if (stderr) {
-      console.log(`stderr: ${stderr}`);
-      return;
-    }
-    console.log(`stdout: ${stdout}`);
-  });
-}
+
 const createExpressApp = async (name) => {
   exec(`cp -R ./heroku-express ../ && mv ../heroku-express/ ../${name}`, (error, stdout, stderr) => {
     if (error) {
@@ -77,6 +51,84 @@ const createDjangoApp = async (name) => {
     console.log(`stdout: ${stdout}`);
   });
 }
+const createScalaApp = async (name) => {
+  exec(`cp -R ./heroku-scala ../ && mv ../heroku-scala/ ../${name}`, (error, stdout, stderr) => {
+    if (error) {
+      console.log(`error: ${error.message}`);
+      return;
+    }
+    if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return;
+    }
+    console.log(`stdout: ${stdout}`);
+  });
+}
+const createClojureApp = async (name) => {
+  exec(`cp -R ./heroku-clojure ../ && mv ../heroku-clojure/ ../${name}`, (error, stdout, stderr) => {
+    if (error) {
+      console.log(`error: ${error.message}`);
+      return;
+    }
+    if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return;
+    }
+    console.log(`stdout: ${stdout}`);
+  });
+}
+const createGoApp = async (name) => {
+  exec(`cp -R ./heroku-go ../ && mv ../heroku-go/ ../${name}`, (error, stdout, stderr) => {
+    if (error) {
+      console.log(`error: ${error.message}`);
+      return;
+    }
+    if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return;
+    }
+    console.log(`stdout: ${stdout}`);
+  });
+}
+const createPhpApp = async (name) => {
+  exec(`cp -R ./heroku-php ../ && mv ../heroku-php/ ../${name}`, (error, stdout, stderr) => {
+    if (error) {
+      console.log(`error: ${error.message}`);
+      return;
+    }
+    if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return;
+    }
+    console.log(`stdout: ${stdout}`);
+  });
+}
+const createJavaApp = async (name) => {
+  exec(`cp -R ./heroku-java ../ && mv ../heroku-java/ ../${name}`, (error, stdout, stderr) => {
+    if (error) {
+      console.log(`error: ${error.message}`);
+      return;
+    }
+    if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return;
+    }
+    console.log(`stdout: ${stdout}`);
+  });
+}
+const createRubyApp = async (name) => {
+  exec(`cp -R ./heroku-ruby ../ && mv ../heroku-ruby/ ../${name}`, (error, stdout, stderr) => {
+    if (error) {
+      console.log(`error: ${error.message}`);
+      return;
+    }
+    if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return;
+    }
+    console.log(`stdout: ${stdout}`);
+  });
+}
 class CreateHerokuAppCommand extends Command {
   async run() {
     const { flags } = this.parse(CreateHerokuAppCommand)
@@ -88,19 +140,30 @@ class CreateHerokuAppCommand extends Command {
       this.log(error);
       return;
     }
-    // making project 
-    // try {
-    //   await makeProject(name);
-    // } catch (e) {
-    //   console.log('proj already exist');
-    // }
-    // await expressInit(name);
     // copy over heroku express project 
     if( typeOfApp == 'express' ) {
       createExpressApp(name);
     }
     else if( typeOfApp == 'django' ) {
       createDjangoApp(name);
+    }
+    else if( typeOfApp == 'scala' ) {
+      createScalaApp(name);
+    }
+    else if( typeOfApp == 'clojure' ) {
+      createClojureApp(name);
+    }
+    else if( typeOfApp == 'go' ) {
+      createGoApp(name);
+    }
+    else if( typeOfApp == 'java' ) {
+      createJavaApp(name);
+    }
+    else if( typeOfApp == 'php' ) {
+      createPhpApp(name);
+    }
+    else if( typeOfApp == 'ruby' ) {
+      createRubyApp(name);
     }
     this.log(`App type selected: ${typeOfApp}`);
     this.log(`App name given: ${name}`);

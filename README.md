@@ -30,7 +30,7 @@ USAGE
 <!-- commands -->
 
 <!-- commandsstop -->
-
-./bin/run --type=express
-
-https://github.com/heroku/node-js-getting-started
+Example of how to run it locally
+```sh-session
+./bin/run --type=express --name=app-name
+```
