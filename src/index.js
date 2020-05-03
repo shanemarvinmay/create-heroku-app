@@ -1,17 +1,34 @@
 const {Command, flags} = require('@oclif/command');
 const { exec } = require("child_process");
-
-exec("ls", (error, stdout, stderr) => {
-  if (error) {
-      console.log(`error: ${error.message}`);
-      return;
-  }
-  if (stderr) {
-      console.log(`stderr: ${stderr}`);
-      return;
-  }
-  console.log(`stdout: ${stdout}`);
-});
+// how to run commands 
+// exec("ls", (error, stdout, stderr) => {
+//   if (error) {
+//       console.log(`error: ${error.message}`);
+//       return;
+//   }
+//   if (stderr) {
+//       console.log(`stderr: ${stderr}`);
+//       return;
+//   }
+//   console.log(`stdout: ${stdout}`);
+// });
+// how to check for a module 
+try {
+  console.log(require.resolve("express"));
+} catch(e) {
+  console.log('Express is not installed.\nInstalling now...');
+  exec("npm install express", (error, stdout, stderr) => {
+    if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+    console.log(`stdout:\n ${stdout}`);
+  });
+}
 
 class CreateHerokuAppCommand extends Command {
   async run() {
