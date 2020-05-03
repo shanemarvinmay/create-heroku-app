@@ -51,6 +51,19 @@ const makeProject = async (name) => {
     console.log(`stdout: ${stdout}`);
   });
 }
+const createExpressApp = async (name) => {
+  exec(`cp -R ./heroku-express ../ && mv ../heroku-express/ ../${name}`, (error, stdout, stderr) => {
+    if (error) {
+      console.log(`error: ${error.message}`);
+      return;
+    }
+    if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return;
+    }
+    console.log(`stdout: ${stdout}`);
+  });
+}
 class CreateHerokuAppCommand extends Command {
   async run() {
     const { flags } = this.parse(CreateHerokuAppCommand)
@@ -63,12 +76,16 @@ class CreateHerokuAppCommand extends Command {
       return;
     }
     // making project 
-    try {
-      await makeProject(name);
-    } catch (e) {
-      console.log('proj already exist');
+    // try {
+    //   await makeProject(name);
+    // } catch (e) {
+    //   console.log('proj already exist');
+    // }
+    // await expressInit(name);
+    // copy over heroku express project 
+    if( typeOfApp == 'express' ) {
+      createExpressApp(name);
     }
-    await expressInit(name);
     this.log(`App type selected: ${typeOfApp}`);
     this.log(`App name given: ${name}`);
   }
