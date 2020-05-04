@@ -24,9 +24,9 @@ const checkArgs = (name, type) => {
   }
   return error;
 };
-
+// && cp -R ./heroku-express ../ && mv ../heroku-express/ ../${name}
 const createExpressApp = async (name) => {
-  exec(`cp -R ./heroku-express ../ && mv ../heroku-express/ ../${name}`, (error, stdout, stderr) => {
+  exec(`ls && cp -R ./heroku-express ../ && mv ../heroku-express/ ./${name} `, (error, stdout, stderr) => {
     if (error) {
       console.log(`error: ${error.message}`);
       return;

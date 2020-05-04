@@ -23,7 +23,15 @@
   },
   "files": [
     "/bin",
-    "/src"
+    "/src",
+    "/heroku-clojure",
+    "/heroku-django",
+    "/heroku-express",
+    "/heroku-go",
+    "/heroku-java",
+    "/heroku-php",
+    "/heroku-ruby",
+    "/heroku-scala"
   ],
   "homepage": "https://github.com/shanemarvinmay/create-heroku-app",
   "keywords": [
@@ -40,5 +48,4 @@
     "test": "echo NO TESTS",
     "version": "oclif-dev readme && git add README.md"
   }
-  
 }
