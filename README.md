@@ -10,48 +10,19 @@ This is a cli to make ready to publish Heroku apps.
 
 
 # Basic Instructions. (I know they are unconventional, I'm working on it.)
-1. clone https://github.com/shanemarvinmay/create-heroku-app 
-2. create-heroku-app --type=[type of app] --name=[name of app]
-  * types of apps:
-    * clojure
-    * django
-    * express
-    * go
-    * java
-    * php
-    * ruby
-    * scala
-  * Example: ```sh-session create-heroku-app --type=express --name=example-app ```
+1. ``` git clone https://github.com/shanemarvinmay/create-heroku-app ```
+2. ``` create-heroku-app --type=[type of app] --name=[name of app] ```
+    * types of apps:
+      * clojure
+      * django
+      * express
+      * go
+      * java
+      * php
+      * ruby
+      * scala
+    * Example: ``` create-heroku-app --type=express --name=example-app ```
 
-
-
-<!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
-<!-- tocstop -->
-# Usage
-<!-- usage -->
-```sh-session
-$ npm install -g create-heroku-app
-<<<<<<< HEAD
-$ create-heroku-app --type=express --name=app-name
-=======
-$ create-heroku-app COMMAND
->>>>>>> a6312f4ae6317ae5f38a85885d277ec69db3b169
-running command...
-$ create-heroku-app (-v|--version|version)
-create-heroku-app/1.0.1 darwin-x64 node-v12.16.1
-$ create-heroku-app --help [COMMAND]
-USAGE
-  $ create-heroku-app COMMAND
-...
-```
-<!-- usagestop -->
-# Commands
-<!-- commands -->
-
-<!-- commandsstop -->
-Example of how to run it locally
-```sh-session
-./bin/run --type=express --name=app-name
-```
+# Important Info!
+This is in beta. Making express apps work. The rest are a bit rough and I'll be updating very soon. After every project works, I'll be improving every project, so they'll be easier to use and up to modern standards.
+## If any project doesn't work, feel free to take out the example app directly out out create-heroku-app directory.
