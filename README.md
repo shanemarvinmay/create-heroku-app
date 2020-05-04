@@ -8,7 +8,7 @@ This is a cli to make ready to publish Heroku apps.
 [![Downloads/week](https://img.shields.io/npm/dw/create-heroku-app.svg)](https://npmjs.org/package/create-heroku-app)
 [![License](https://img.shields.io/npm/l/create-heroku-app.svg)](https://github.com/shanemarvinmay/create-heroku-app/blob/master/package.json)
 
-<<<<<<< HEAD
+
 # Basic Instructions. (I know they are unconventional, I'm working on it.)
 1. clone https://github.com/shanemarvinmay/create-heroku-app 
 2. create-heroku-app --type=[type of app] --name=[name of app]
@@ -21,10 +21,10 @@ This is a cli to make ready to publish Heroku apps.
     * php
     * ruby
     * scala
+  * Example: ```sh-session create-heroku-app --type=express --name=example-app ```
 
 
-=======
->>>>>>> a6312f4ae6317ae5f38a85885d277ec69db3b169
+
 <!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
