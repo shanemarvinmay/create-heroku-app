@@ -26,7 +26,7 @@ const checkArgs = (name, type) => {
 };
 // && cp -R ./heroku-express ../ && mv ../heroku-express/ ../${name}
 const createExpressApp = async (name) => {
-  exec(`cp -R ./heroku-express ../ && mv ../heroku-express ../${name} `, (error, stdout, stderr) => {
+  exec(`git clone https://github.com/shanemarvinmay/heroku-express && mv ./heroku-express ./${name} `, (error, stdout, stderr) => {
     if (error) {
       console.log(`error: ${error.message}`);
       return;
