@@ -10,7 +10,7 @@ This is a cli to make ready to publish Heroku apps.
 
 
 # Basic Instructions. (I know they are unconventional, I'm working on it.)
-1. ``` git clone https://github.com/shanemarvinmay/create-heroku-app ```
+1. ``` git clone https://github.com/shanemarvinmay/create-heroku-app ``` (or npm install create-heroku-app)
 2. ``` create-heroku-app --type=[type of app] --name=[name of app] ```
     * types of apps:
       * clojure
