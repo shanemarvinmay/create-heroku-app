@@ -39,7 +39,7 @@ const createExpressApp = async (name) => {
   });
 }
 const createDjangoApp = async (name) => {
-  exec(`cp -R ./heroku-django ../ && mv ../heroku-django/ ../${name}`, (error, stdout, stderr) => {
+  exec(`git clone https://github.com/shanemarvinmay/heroku-django && mv ./heroku-django ./${name} `, (error, stdout, stderr) => {
     if (error) {
       console.log(`error: ${error.message}`);
       return;
@@ -52,7 +52,7 @@ const createDjangoApp = async (name) => {
   });
 }
 const createScalaApp = async (name) => {
-  exec(`cp -R ./heroku-scala ../ && mv ../heroku-scala/ ../${name}`, (error, stdout, stderr) => {
+  exec(`git clone https://github.com/shanemarvinmay/heroku-scala && mv ./heroku-scala ./${name} `, (error, stdout, stderr) => {
     if (error) {
       console.log(`error: ${error.message}`);
       return;
@@ -65,7 +65,7 @@ const createScalaApp = async (name) => {
   });
 }
 const createClojureApp = async (name) => {
-  exec(`cp -R ./heroku-clojure ../ && mv ../heroku-clojure/ ../${name}`, (error, stdout, stderr) => {
+  exec(`git clone https://github.com/shanemarvinmay/heroku-clojure && mv ./heroku-clojure ./${name} `, (error, stdout, stderr) => {
     if (error) {
       console.log(`error: ${error.message}`);
       return;
@@ -78,7 +78,7 @@ const createClojureApp = async (name) => {
   });
 }
 const createGoApp = async (name) => {
-  exec(`cp -R ./heroku-go ../ && mv ../heroku-go/ ../${name}`, (error, stdout, stderr) => {
+  exec(`git clone https://github.com/shanemarvinmay/heroku-go && mv ./heroku-go ./${name} `, (error, stdout, stderr) => {
     if (error) {
       console.log(`error: ${error.message}`);
       return;
@@ -91,7 +91,7 @@ const createGoApp = async (name) => {
   });
 }
 const createPhpApp = async (name) => {
-  exec(`cp -R ./heroku-php ../ && mv ../heroku-php/ ../${name}`, (error, stdout, stderr) => {
+  exec(`git clone https://github.com/shanemarvinmay/heroku-php && mv ./heroku-php ./${name} `, (error, stdout, stderr) => {
     if (error) {
       console.log(`error: ${error.message}`);
       return;
@@ -104,7 +104,7 @@ const createPhpApp = async (name) => {
   });
 }
 const createJavaApp = async (name) => {
-  exec(`cp -R ./heroku-java ../ && mv ../heroku-java/ ../${name}`, (error, stdout, stderr) => {
+  exec(`git clone https://github.com/shanemarvinmay/heroku-java && mv ./heroku-java ./${name} `, (error, stdout, stderr) => {
     if (error) {
       console.log(`error: ${error.message}`);
       return;
@@ -117,7 +117,7 @@ const createJavaApp = async (name) => {
   });
 }
 const createRubyApp = async (name) => {
-  exec(`cp -R ./heroku-ruby ../ && mv ../heroku-ruby/ ../${name}`, (error, stdout, stderr) => {
+  exec(`git clone https://github.com/shanemarvinmay/heroku-ruby && mv ./heroku-ruby ./${name} `, (error, stdout, stderr) => {
     if (error) {
       console.log(`error: ${error.message}`);
       return;
