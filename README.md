@@ -5,10 +5,7 @@ This is a cli to make ready to publish Heroku apps.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/create-heroku-app.svg)](https://npmjs.org/package/create-heroku-app)
-
 [![Downloads](https://img.shields.io/npm/dt/create-heroku-app.svg)](https://npmjs.org/package/create-heroku-app)
-
-
 [![License](https://img.shields.io/npm/l/create-heroku-app.svg)](https://github.com/shanemarvinmay/create-heroku-app/blob/master/package.json)
 
 
